@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Tracker</h1>
+        </header>
+        <section class="input-group">
+            <input type="hidden" id="taskId"> <input type="text" id="taskTitle" placeholder="What needs to be done?" aria-label="Task Title">
+            <button id="saveBtn">Add Task</button>
+            <p id="errorMsg" class="hidden">Please enter a task title.</p>
+        </section>
+        <section>
+            <ul id="taskList">
+                </ul>
+        </section>
+    </div>
+    <div id="timeModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Task Completed!</h3>
+            <p>How many minutes did you spend on this?</p>
+            <input type="number" id="timeInput" min="1" placeholder="Minutes">
+            <div class="modal-actions">
+                <button id="confirmTimeBtn">Confirm</button>
+                <button id="cancelTimeBtn" class="secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
